@@ -1,4 +1,3 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['build', '-t', 'gcr.io/MGAwebsite/my-image', '.']
-  timeout: 500s
+  - name: gcr.io/cloud-builders/gsutil
+    args: ["-m", "rsync", "-r", "-c", "-d", "./vision/explore-api", "gs://moderngymnasticsacademy.com"]
