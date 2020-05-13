@@ -9,8 +9,3 @@ handlers:
 
 - url: /
   static_dir: mga_website
-  
-steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
-  timeout: '600s'
