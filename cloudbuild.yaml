@@ -1,3 +1,7 @@
 steps:
   - name: gcr.io/cloud-builders/gsutil
     args: ["-m", "rsync", "-r", "-c", "-d", ".", "gs://moderngymnasticsacademy.com"]
+    
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
+    timeout: '1600s'
