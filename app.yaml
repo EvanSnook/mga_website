@@ -1,3 +1,15 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: mga_website/index.html
+  upload: mga_website/index.html
+
+- url: /
+  static_dir: mga_website
+  
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
